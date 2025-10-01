@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Note FitNFun Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📅 Daily Note FitNFun Tracker</h1>
+
+        <div id="auth-container">
+            <div id="login-view">
+                <h2>Masuk</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button id="login-btn">Masuk</button>
+                <p>Belum punya akun? <a href="#" id="show-register">Daftar di sini</a></p>
+            </div>
+            <div id="register-view" class="hidden">
+                <h2>Daftar Akun Baru</h2>
+                <input type="text" id="register-username" placeholder="Buat Username">
+                <input type="password" id="register-password" placeholder="Buat Password">
+                <input type="text" id="register-activation-code" placeholder="Kode Aktivasi" style="text-transform:uppercase">
+                <p>Pilih program awal:</p>
+                <select id="program-choice">
+                    <option value="cutting">🏋️‍♂️ Program Cutting</option>
+                    <option value="sehat">💚 Program Hidup Sehat</option>
+                </select>
+                <button id="register-btn">Daftar</button>
+                <p>Sudah punya akun? <a href="#" id="show-login">Masuk di sini</a></p>
+            </div>
+        </div>
+
+        <div id="app-container" class="hidden">
+            <div class="header">
+                <h2 id="welcome-message"></h2>
+                <button id="logout-btn">Logout</button>
+            </div>
+            
+            <div class="main-content">
+                <h3>Tugas Hari Ini (Hari ke-<span id="current-day-span">1</span>)</h3>
+                <div id="today-tasks-container">
+                    </div>
+                 <button id="edit-schedule-btn">Ubah Rencana Mingguan</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal-btn">&times;</span>
+            <h2>Ubah Rencana Mingguan</h2>
+            <p>Masukkan satu aktivitas per baris untuk setiap hari.</p>
+            <div id="schedule-editor">
+                </div>
+            <button id="save-schedule-btn">Simpan Rencana</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
